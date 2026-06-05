@@ -19,6 +19,12 @@ const app = express();
 
 app.use(cors());
 app.use(bodyParser.json());
+app.get("/", (req, res) => {
+  res.json({
+    status: "success",
+    message: "TradeSphere Backend is Running 🚀"
+  });
+});
 
  app.get("/addHoldings", async (req, res) => {
   let tempHoldings = [
